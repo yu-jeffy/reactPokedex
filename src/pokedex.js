@@ -1,3 +1,4 @@
+
 import './pokedex.css';
 
 function Pokedex() {
