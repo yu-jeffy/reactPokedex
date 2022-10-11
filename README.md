@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# reactPokedex
+A Fully Functional Pokedex written in React.js on Node.js
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
