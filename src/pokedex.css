@@ -1,0 +1,314 @@
+.pokedex-page {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+#########################################
+#########################################
+###### Pokedex Structure
+#########################################
+#########################################
+*/
+
+.pokedex-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.pokedex-left {
+  background-color: #dc0a2d;
+  border-radius: 7px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px #89061c,
+              3px 3px #89061c,
+              4px 4px #89061c,
+              5px 5px #89061c,
+              6px 6px #89061c,
+              7px 7px #89061c,
+              8px 8px #89061c,
+              9px 9px #000000;
+  width: 500px;
+  height: 600px;
+}
+
+.pokedex-right{
+  background-color: #dc0a2d;
+  border-radius: 7px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px #89061c,
+              3px 3px #89061c,
+              4px 4px #89061c,
+              5px 5px #89061c,
+              6px 6px #89061c,
+              7px 7px #89061c,
+              8px 8px #89061c,
+              9px 9px #000000;
+  width: 410px;
+  height: 530px;
+  padding-right: 40px;
+  padding-left: 50px;
+}
+
+/*
+#########################################
+#########################################
+###### Blinking Circles
+#########################################
+#########################################
+*/
+
+.circle1{
+  width: 70px;
+  height: 70px;
+  background-color: #146b9f;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 1px #000000,
+    0 0 0 15px #e9eef3,
+    0 0 0 16px #000000;
+  position: relative;
+  top: 35px;
+  left: 35px;
+}
+
+.light-circle1{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  top: 17px;
+  left: 17px;
+  animation: lightCircle1Blinks 6s linear 0s infinite;
+}
+@keyframes lightCircle1Blinks{
+  0%{
+    background-color: #146b9f;
+    box-shadow: none;
+  }
+  25%{
+    background-color: #146b9f;
+    box-shadow: none;
+  }
+  50%{
+    background-color: rgb(0 255 255 / 25%);
+    box-shadow: 0 0 40px 0 #0ff;
+  }
+  75%{
+    background-color: #146b9f;
+    box-shadow: none;
+  }
+  100%{
+    background-color: #146b9f;
+    box-shadow: none;
+  }
+  
+}
+
+.circleRed {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #000000;
+  background-color: #710000;
+  top: -35px;
+  left: 135px;
+  animation: circle2RedBlinks 4s ease 0s infinite;
+}
+@keyframes circle2RedBlinks{
+  0%{
+    background-color: #710000;
+    box-shadow: none;
+  }
+  25%{
+    background-color: #710000;
+    box-shadow: none;
+  }
+  50%{
+    background-color: rgb(255 0 0 / 25%);
+    box-shadow: 0 0 9px 0 #f00;
+  }
+  75%{
+    background-color: #710000;
+    box-shadow: none;
+  }
+  100%{
+    background-color: #710000;
+    box-shadow: none;
+  }
+
+}
+
+.circleYellow {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #000000;
+  background-color: #c3ba00;
+  top: -57px;
+  left: 165px;
+  animation: circle2YellowBlinks 2.25s ease 0s infinite;
+}
+@keyframes circle2YellowBlinks{
+  0%{
+    background-color: #c3ba00;
+    box-shadow: none;
+  }
+  25%{
+    background-color: #c3ba00;
+    box-shadow: none;
+  }
+  50%{
+    background-color: rgb(247 246 218 / 68%);
+    box-shadow: 0 0 9px 0 rgb(253 255 145);
+  }
+  75%{
+    background-color: #c3ba00;
+    box-shadow: none;
+  }
+  100%{
+    background-color: #c3ba00;
+    box-shadow: none;
+  }
+
+}
+
+.circleGreen {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #000000;
+  background-color: #1f743b;
+  top: -79px;
+  left: 195px;
+  animation: circle2GreenBlinks 7s ease 0s infinite;
+}
+@keyframes circle2GreenBlinks{
+  0%{
+    background-color: #1f743b;
+    box-shadow: none;
+  }
+  25%{
+    background-color: #1f743b;
+    box-shadow: none;
+  }
+  50%{
+    background-color: rgb(247 246 218 / 68%);
+    box-shadow: 0 0 9px 0 rgb(253 255 145);
+  }
+  75%{
+    background-color: #1f743b;
+    box-shadow: none;
+  }
+  100%{
+    background-color: #1f743b;
+    box-shadow: none;
+  }
+
+}
+
+/*
+#########################################
+#########################################
+###### Left Screen
+#########################################
+#########################################
+*/
+
+.screen-row{
+  display: flex;
+  height: 350px;
+  justify-content: center;
+}
+.screen-border{
+  background-color: #dedede;
+  border: 1px solid #000000;
+  width: 300px;
+  border-radius: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.top-screen-decoration{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-screen-decoration{
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.screen{
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  border-radius: 5px;
+}
+.circle3{
+  width: 10px;
+  height: 10px;
+  background-color: #dc0a2d;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.circle4{
+  width: 20px;
+  height: 20px;
+  background-color: #dc0a2d;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  margin-left: 0px
+}
+
+/*
+#########################################
+#########################################
+###### Right Screen
+#########################################
+#########################################
+*/
+
+.screen-row-right{
+  display: flex;
+  height: 480px;
+  justify-content: center;
+  margin-top: 25px;
+}
+.top-screen-decoration-right{
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.screen-right{
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 320px;
+  border-radius: 5px;
+}
+
+/*
+#########################################
+#########################################
+###### App Background
+#########################################
+#########################################
+*/
+
+.app-background {
+  
+}
