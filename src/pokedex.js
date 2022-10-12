@@ -33,6 +33,7 @@ function Pokedex() {
                 </div>
                 <div className="screen">
                   <div className="screen-content">
+                    test
                   </div>
                 </div>
                 <div className="bottom-screen-decoration">
