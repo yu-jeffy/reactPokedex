@@ -1,9 +1,36 @@
-
+import React, { useState, useEffect } from 'react';
 import './pokedex.css';
 
 function Pokedex() {
 
+  const [pokemon, setPokemon] = useState(["bulbasaur"]);
 
+  const [pokemonData, setPokemonData] = useState({});
+
+  function updatePokemon(event) {
+    event.persist();
+    setPokemon(event.target.value.toLowerCase());
+    getPokemonData();
+  };
+
+  function getPokemonData() {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+      .then(response => response.json())
+      .then(data => {
+        setPokemonData(data);
+      })
+      .catch(error => {
+        console.log("invalid pokemon")
+      });
+  };
+
+  useEffect(() => {
+    getPokemonData();
+  }, [pokemon]);
+
+  function updateDisplay() {
+
+  };
 
   return (
     <div className="pokedex-page">
@@ -33,7 +60,11 @@ function Pokedex() {
                 </div>
                 <div className="screen">
                   <div className="screen-content">
-                    test
+                    {pokemonData.name}
+                    <br />
+                    {pokemonData.id}
+                    <br />
+                    {pokemonData.sprites ? <img src={pokemonData.sprites.front_default} alt="pokemon_image" /> : null}
                   </div>
                 </div>
                 <div className="bottom-screen-decoration">
@@ -47,7 +78,12 @@ function Pokedex() {
                     </svg>
 
                   </div>
+
                 </div>
+                <label>
+                  Pokemon:
+                  <input type="text" value={pokemon} onChange={updatePokemon} />
+                </label>
               </div>
             </div>
 
