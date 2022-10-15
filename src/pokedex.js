@@ -60,11 +60,17 @@ function Pokedex() {
                 </div>
                 <div className="screen">
                   <div className="screen-content">
-                    {pokemonData.name}
-                    <br />
-                    {pokemonData.id}
-                    <br />
-                    {pokemonData.sprites ? <img src={pokemonData.sprites.front_default} alt="pokemon_image" /> : null}
+                    <div className="screen-content-sprite">
+                      {pokemonData.sprites ? <img src={pokemonData.sprites.front_default} alt="pokemon_image" /> : null}
+                    </div>
+                    <div className="screen-content-info">
+                      <div className="screen-content-info-name">
+                        {pokemonData.name}
+                      </div>
+                      <div className="screen-content-info-id">
+                        ID No. {pokemonData.id}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="bottom-screen-decoration">
@@ -96,7 +102,17 @@ function Pokedex() {
                 </div>
                 <div className="screen-right">
                   <div className="screen-content">
+                    {pokemonData.id}
+                    <br />
                   </div>
+                </div>
+                <div className="buttons-grid-right">
+                  <div className="button1">TYPES</div>
+                  <div className="button2">EVOLUTION</div>
+                  <div className="button3">MOVES</div>
+                  <div className="button4">ABILITIES</div>
+                  <div className="button5">ITEMS</div>
+                  <div className="button6">SHINY</div>
                 </div>
               </div>
             </div>
