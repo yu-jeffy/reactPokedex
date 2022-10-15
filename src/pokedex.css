@@ -12,6 +12,17 @@
   justify-content: center;
 }
 
+@font-face {
+  font-family: 'PokemonSolid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('https://fonts.cdnfonts.com/css/share-tech-mono');
+}
 
 /*
 #########################################
@@ -21,9 +32,7 @@
 #########################################
 */
 
-.app-background {
-  
-}
+.app-background {}
 
 
 /*
@@ -46,29 +55,29 @@
   border-radius: 7px;
   border: 2px solid #000000;
   box-shadow: 2px 2px #89061c,
-              3px 3px #89061c,
-              4px 4px #89061c,
-              5px 5px #89061c,
-              6px 6px #89061c,
-              7px 7px #89061c,
-              8px 8px #89061c,
-              9px 9px #000000;
+    3px 3px #89061c,
+    4px 4px #89061c,
+    5px 5px #89061c,
+    6px 6px #89061c,
+    7px 7px #89061c,
+    8px 8px #89061c,
+    9px 9px #000000;
   width: 500px;
   height: 600px;
 }
 
-.pokedex-right{
+.pokedex-right {
   background-color: #dc0a2d;
   border-radius: 7px;
   border: 2px solid #000000;
   box-shadow: 2px 2px #89061c,
-              3px 3px #89061c,
-              4px 4px #89061c,
-              5px 5px #89061c,
-              6px 6px #89061c,
-              7px 7px #89061c,
-              8px 8px #89061c,
-              9px 9px #000000;
+    3px 3px #89061c,
+    4px 4px #89061c,
+    5px 5px #89061c,
+    6px 6px #89061c,
+    7px 7px #89061c,
+    8px 8px #89061c,
+    9px 9px #000000;
   width: 410px;
   height: 530px;
   padding-right: 40px;
@@ -83,12 +92,12 @@
 #########################################
 */
 
-.circle1{
+.circle1 {
   width: 70px;
   height: 70px;
   background-color: #146b9f;
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     0 0 0 1px #000000,
     0 0 0 15px #e9eef3,
     0 0 0 16px #000000;
@@ -97,7 +106,7 @@
   left: 35px;
 }
 
-.light-circle1{
+.light-circle1 {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -106,28 +115,33 @@
   left: 17px;
   animation: lightCircle1Blinks 6s linear 0s infinite;
 }
-@keyframes lightCircle1Blinks{
-  0%{
+
+@keyframes lightCircle1Blinks {
+  0% {
     background-color: #146b9f;
     box-shadow: none;
   }
-  25%{
+
+  25% {
     background-color: #146b9f;
     box-shadow: none;
   }
-  50%{
+
+  50% {
     background-color: rgb(0 255 255 / 25%);
     box-shadow: 0 0 40px 0 #0ff;
   }
-  75%{
+
+  75% {
     background-color: #146b9f;
     box-shadow: none;
   }
-  100%{
+
+  100% {
     background-color: #146b9f;
     box-shadow: none;
   }
-  
+
 }
 
 .circleRed {
@@ -141,24 +155,29 @@
   left: 135px;
   animation: circle2RedBlinks 4s ease 0s infinite;
 }
-@keyframes circle2RedBlinks{
-  0%{
+
+@keyframes circle2RedBlinks {
+  0% {
     background-color: #710000;
     box-shadow: none;
   }
-  25%{
+
+  25% {
     background-color: #710000;
     box-shadow: none;
   }
-  50%{
+
+  50% {
     background-color: rgb(255 0 0 / 25%);
     box-shadow: 0 0 9px 0 #f00;
   }
-  75%{
+
+  75% {
     background-color: #710000;
     box-shadow: none;
   }
-  100%{
+
+  100% {
     background-color: #710000;
     box-shadow: none;
   }
@@ -176,24 +195,29 @@
   left: 165px;
   animation: circle2YellowBlinks 2.25s ease 0s infinite;
 }
-@keyframes circle2YellowBlinks{
-  0%{
+
+@keyframes circle2YellowBlinks {
+  0% {
     background-color: #c3ba00;
     box-shadow: none;
   }
-  25%{
+
+  25% {
     background-color: #c3ba00;
     box-shadow: none;
   }
-  50%{
+
+  50% {
     background-color: rgb(247 246 218 / 68%);
     box-shadow: 0 0 9px 0 rgb(253 255 145);
   }
-  75%{
+
+  75% {
     background-color: #c3ba00;
     box-shadow: none;
   }
-  100%{
+
+  100% {
     background-color: #c3ba00;
     box-shadow: none;
   }
@@ -211,24 +235,29 @@
   left: 195px;
   animation: circle2GreenBlinks 7s ease 0s infinite;
 }
-@keyframes circle2GreenBlinks{
-  0%{
+
+@keyframes circle2GreenBlinks {
+  0% {
     background-color: #1f743b;
     box-shadow: none;
   }
-  25%{
+
+  25% {
     background-color: #1f743b;
     box-shadow: none;
   }
-  50%{
+
+  50% {
     background-color: rgb(247 246 218 / 68%);
     box-shadow: 0 0 9px 0 rgb(253 255 145);
   }
-  75%{
+
+  75% {
     background-color: #1f743b;
     box-shadow: none;
   }
-  100%{
+
+  100% {
     background-color: #1f743b;
     box-shadow: none;
   }
@@ -243,12 +272,13 @@
 #########################################
 */
 
-.screen-row{
+.screen-row {
   display: flex;
   height: 350px;
   justify-content: center;
 }
-.screen-border{
+
+.screen-border {
   background-color: #dedede;
   border: 1px solid #000000;
   width: 300px;
@@ -256,19 +286,22 @@
   padding-right: 50px;
   padding-left: 50px;
 }
-.top-screen-decoration{
+
+.top-screen-decoration {
   display: flex;
   height: 50px;
   justify-content: center;
   align-items: center;
 }
-.bottom-screen-decoration{
+
+.bottom-screen-decoration {
   display: flex;
   height: 50px;
   justify-content: space-between;
   align-items: center;
 }
-.screen{
+
+.screen {
   background-color: #232323;
   display: flex;
   justify-content: center;
@@ -276,7 +309,8 @@
   height: 250px;
   border-radius: 5px;
 }
-.circle3{
+
+.circle3 {
   width: 10px;
   height: 10px;
   background-color: #dc0a2d;
@@ -285,7 +319,8 @@
   margin-right: 50px;
   margin-left: 50px;
 }
-.circle4{
+
+.circle4 {
   width: 20px;
   height: 20px;
   background-color: #dc0a2d;
@@ -302,19 +337,21 @@
 #########################################
 */
 
-.screen-row-right{
+.screen-row-right {
   display: flex;
   height: 480px;
   justify-content: center;
   margin-top: 25px;
 }
-.top-screen-decoration-right{
+
+.top-screen-decoration-right {
   display: flex;
   height: 40px;
   justify-content: center;
   align-items: center;
 }
-.screen-right{
+
+.screen-right {
   background-color: #232323;
   display: flex;
   justify-content: center;
@@ -322,6 +359,101 @@
   height: 320px;
   border-radius: 5px;
 }
+
+
+/*
+#########################################
+#########################################
+###### Right Button Grid
+#########################################
+#########################################
+*/
+
+
+.buttons-grid-right {
+  font-family: 'PokemonSolid';
+  font-size: medium;
+  letter-spacing: 3px;
+  line-height: 20px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+  padding-top: 8px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 30px 30px 30px;
+  grid-auto-columns: 1fr;
+  gap: 2px 4%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "button1 button2"
+    "button3 button4"
+    "button5 button6";
+}
+
+.button1 {
+  grid-area: button1;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+.button2 {
+  grid-area: button2;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+.button3 {
+  grid-area: button3;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+.button4 {
+  grid-area: button4;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+.button5 {
+  grid-area: button5;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+.button6 {
+  grid-area: button6;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  background: #008080;
+}
+
+
+
+/*
+#########################################
+#########################################
+###### Left Screen Info
+#########################################
+#########################################
+*/
+
+.screen-content-info-id{
+  font-family: 'PixelFont';
+}
+
+.screen-content-info-name{
+  font-family: 'PixelFont';
+}
+
+
+
 
 /*
 #########################################
@@ -346,4 +478,3 @@ button {
   top: 0;
   right: 0;
 }
-
