@@ -13,8 +13,23 @@ const rightScreenInitialState = {
 function rightScreenReducer(state, action) {
   switch (action.type) {
     case 'types':
-      let opposite = !state.types;
+      var opposite = !state.types;
       return { types: opposite };
+    case 'evolution':
+      var opposite = !state.evolution;
+      return { evolution: opposite };
+    case 'moves':
+      var opposite = !state.moves;
+      return { moves: opposite };
+    case 'abilities':
+      var opposite = !state.abilities;
+      return { abilities: opposite };
+    case 'items':
+      var opposite = !state.items;
+      return { items: opposite };
+    case 'shiny':
+      var opposite = !state.shiny;
+      return { shiny: opposite };
     default:
       throw new Error();
   }
@@ -127,15 +142,22 @@ function Pokedex() {
                         </div>
                       )) : null}
                     </div>
+                    <div className="screen-content-types">
+                      {pokemonData.types && rightScreenState.types ? pokemonData.types.map((type, i) => (
+                        <div key={i}>
+                          Type: {type.type.name}
+                        </div>
+                      )) : null}
+                    </div>
                   </div>
                 </div>
                 <div className="buttons-grid-right">
                   <div className="button1" onClick={() => rightScreenDispatch({ type: 'types' })}>TYPES</div>
-                  <div className="button2">EVOLUTION</div>
-                  <div className="button3">MOVES</div>
-                  <div className="button4">ABILITIES</div>
-                  <div className="button5">ITEMS</div>
-                  <div className="button6">SHINY</div>
+                  <div className="button2" onClick={() => rightScreenDispatch({ type: 'evolution' })}>EVOLUTION</div>
+                  <div className="button3" onClick={() => rightScreenDispatch({ type: 'moves' })}>MOVES</div>
+                  <div className="button4" onClick={() => rightScreenDispatch({ type: 'abilities' })}>ABILITIES</div>
+                  <div className="button5" onClick={() => rightScreenDispatch({ type: 'items' })}>ITEMS</div>
+                  <div className="button6" onClick={() => rightScreenDispatch({ type: 'shiny' })}>SHINY</div>
                 </div>
               </div>
             </div>
