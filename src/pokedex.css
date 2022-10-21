@@ -329,6 +329,8 @@
   margin-left: 0px
 }
 
+
+
 /*
 #########################################
 #########################################
@@ -390,6 +392,10 @@
     "button1 button2"
     "button3 button4"
     "button5 button6";
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 .button1 {
@@ -444,12 +450,22 @@
 #########################################
 */
 
+.screen-content {
+  color: #f8f8ff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.screen-content-info {
+  
+}
+
 .screen-content-info-id{
-  font-family: 'PixelFont';
+  float: left;
 }
 
 .screen-content-info-name{
-  font-family: 'PixelFont';
+  float: right;
 }
 
 

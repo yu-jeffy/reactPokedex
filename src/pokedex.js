@@ -1,11 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import './pokedex.css';
+
+const rightScreenInitialState = {
+  types: true,
+  evolution: false,
+  moves: false,
+  abilities: false,
+  items: false,
+  shiny: false
+};
+
+function rightScreenReducer(state, action) {
+  switch (action.type) {
+    case 'types':
+      let opposite = !state.types;
+      return { types: opposite };
+    default:
+      throw new Error();
+  }
+};
 
 function Pokedex() {
 
   const [pokemon, setPokemon] = useState(["bulbasaur"]);
 
   const [pokemonData, setPokemonData] = useState({});
+
+  const [rightScreenState, rightScreenDispatch] = useReducer(rightScreenReducer, rightScreenInitialState);
 
   function updatePokemon(event) {
     event.persist();
@@ -28,9 +49,6 @@ function Pokedex() {
     getPokemonData();
   }, [pokemon]);
 
-  function updateDisplay() {
-
-  };
 
   return (
     <div className="pokedex-page">
@@ -102,12 +120,17 @@ function Pokedex() {
                 </div>
                 <div className="screen-right">
                   <div className="screen-content">
-                    {pokemonData.id}
-                    <br />
+                    <div className="screen-content-types">
+                      {pokemonData.types && rightScreenState.types ? pokemonData.types.map((type, i) => (
+                        <div key={i}>
+                          Type: {type.type.name}
+                        </div>
+                      )) : null}
+                    </div>
                   </div>
                 </div>
                 <div className="buttons-grid-right">
-                  <div className="button1">TYPES</div>
+                  <div className="button1" onClick={() => rightScreenDispatch({ type: 'types' })}>TYPES</div>
                   <div className="button2">EVOLUTION</div>
                   <div className="button3">MOVES</div>
                   <div className="button4">ABILITIES</div>
