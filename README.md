@@ -1,7 +1,7 @@
 # reactPokedex
 A Fully Functional Pokedex written in React.js on Node.js
 
-![beta build image](https://i.gyazo.com/bfa83e8209769f3e5a0f718feac9f305.png)
+![beta build image](https://i.gyazo.com/02527f878d67dbf76362b5cc09230d7a.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

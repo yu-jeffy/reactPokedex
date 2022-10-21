@@ -92,7 +92,7 @@ function Pokedex() {
                   <div className="circle3"></div>
                 </div>
                 <div className="screen">
-                  <div className="screen-content">
+                  <div className="screen-content-left">
                     <div className="screen-content-sprite">
                       {pokemonData.sprites ? <img src={pokemonData.sprites.front_default} alt="pokemon_image" /> : null}
                     </div>
@@ -134,7 +134,7 @@ function Pokedex() {
                 <div className="top-screen-decoration-right">
                 </div>
                 <div className="screen-right">
-                  <div className="screen-content">
+                  <div className="screen-content-right">
                     <div className="screen-content-types">
                       {pokemonData.types && rightScreenState.types ? pokemonData.types.map((type, i) => (
                         <div key={i}>
@@ -142,10 +142,10 @@ function Pokedex() {
                         </div>
                       )) : null}
                     </div>
-                    <div className="screen-content-types">
-                      {pokemonData.types && rightScreenState.types ? pokemonData.types.map((type, i) => (
+                    <div className="screen-content-moves">
+                      {pokemonData.moves && rightScreenState.moves ? pokemonData.moves.map((move, i) => (
                         <div key={i}>
-                          Type: {type.type.name}
+                          {move.move.name}
                         </div>
                       )) : null}
                     </div>
