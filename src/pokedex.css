@@ -330,7 +330,6 @@
 }
 
 
-
 /*
 #########################################
 #########################################
@@ -362,6 +361,12 @@
   border-radius: 5px;
 }
 
+.screen-content-right{
+  color: #f8f8ff;
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
+}
 
 /*
 #########################################
@@ -450,10 +455,10 @@
 #########################################
 */
 
-.screen-content {
+.screen-content-left{
   color: #f8f8ff;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
+
 }
 
 .screen-content-info {
